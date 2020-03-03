@@ -12,6 +12,8 @@ namespace pokémon
 		private int _SpecialAttack_Base;
 		private int _SpecialDefense_Base;
 		private int _Speed_Base;
+
+		//stats
 		public int HP_Base
 		{
 			get { return _HP_Base; }
@@ -54,10 +56,12 @@ namespace pokémon
 			set { _Speed_Base = value; }
 		}
 
+		//info
+
 		public string Naam { get; set; }
 		public string Type { get; set; }
 		public int Nummer { get; set; }
-
+		//level
 		private int level;
 
 		public int Level
@@ -69,7 +73,7 @@ namespace pokémon
 		{
 			level++;
 		}
-
+		//average+total
 		public int Average { 
 			get { return (HP_Base + Attack_Base + Defense_Base + SpecialAttack_Base + SpecialDefense_Base + Speed_Base) / 6; } 
 		}
@@ -77,6 +81,8 @@ namespace pokémon
 		{
 			get { return (HP_Base + Attack_Base + Defense_Base + SpecialAttack_Base + SpecialDefense_Base + Speed_Base); }
 		}
+
+		//Fullstats
 		public int HP_Full {
 			get {return ((((HP_Base + 50) * Level) / 50) + 10 ); }
 
@@ -109,7 +115,12 @@ namespace pokémon
 			get { return ((((Speed_Base + 50) * Level) / 50) + 5); }
 
 		}
-
+		public void ShowInfo()
+		{
+			Console.WriteLine($"{Naam} (level {Level})");
+			Console.WriteLine($"Base stats: \n \t * Health = {HP_Base} \n \t * Speed = {Speed_Base} \n \t etc");
+			Console.WriteLine($"Full stats: \n\t * Health = {HP_Full} \n\t etc.");
+		}
 
 	}
 
