@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace pokémon
+namespace poketester
 {
 	class pokemon
 	{
