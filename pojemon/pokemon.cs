@@ -77,6 +77,40 @@ namespace pokémon
 		{
 			get { return (HP_Base + Attack_Base + Defense_Base + SpecialAttack_Base + SpecialDefense_Base + Speed_Base); }
 		}
+		public int HP_Full {
+			get {return ((((HP_Base + 50) * Level) / 50) + 10 ); }
+
+				}
+		public int Attack_Full
+		{
+			get { return ((((Attack_Base + 50) * Level) / 50) + 5); }
+
+		}
+
+		public int Defense_Full
+		{
+			get { return ((((Defense_Base + 50) * Level) / 50) + 5); }
+
+		}
+
+		public int SpecialAttack_Full
+		{
+			get { return ((((SpecialAttack_Base + 50) * Level) / 50) + 5); }
+
+		}
+
+		public int SpecialDefense_Full
+		{
+			get { return ((((SpecialDefense_Base + 50) * Level) / 50) + 5); }
+
+		}
+		public int Speed_Full
+		{
+			get { return ((((Speed_Base + 50) * Level) / 50) + 5); }
+
+		}
+
+
 	}
 
 }
