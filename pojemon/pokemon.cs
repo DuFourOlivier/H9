@@ -69,6 +69,14 @@ namespace pokémon
 		{
 			level++;
 		}
+
+		public int Average { 
+			get { return (HP_Base + Attack_Base + Defense_Base + SpecialAttack_Base + SpecialDefense_Base + Speed_Base) / 6; } 
+		}
+		public int Total
+		{
+			get { return (HP_Base + Attack_Base + Defense_Base + SpecialAttack_Base + SpecialDefense_Base + Speed_Base); }
+		}
 	}
 
 }
