@@ -54,6 +54,8 @@ namespace pokémon
 			set { _Speed_Base = value; }
 		}
 
-
+		public string Naam { get; set; }
+		public string Type { get; set; }
+		public int Nummer { get; set; }
 	}
 }
